@@ -1,0 +1,29 @@
+# Local audit reports - keep on computer, exclude from GitHub
+ai-audit-report.txt
+ai-audit-deep-report.txt
+
+# Common ignores
+node_modules/
+.next/
+.DS_Store
+
+# Environment files (protect all secrets, allow only .env.example)
+.env
+.env*.local
+.env.development
+.env.test
+.env.production
+.env.staging
+!.env.example
+
+# Database backup archives
+backups/
+
+# Local MongoDB database and logs - never upload to GitHub
+/data/
+
+# Generated MongoDB diagnostic data
+data/db/diagnostic.data/
+
+# TypeScript generated build information
+*.tsbuildinfo

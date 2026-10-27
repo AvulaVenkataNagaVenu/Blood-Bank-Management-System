@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  :root {
+    /* Clinical Red & Slate - Light Mode */
+    --background: 210 20% 98%;          /* Clean clinical slate-50 canvas */
+    --foreground: 222.2 47.4% 11.2%;    /* Deep slate-900 high-legibility text */
+    --card: 0 0% 100%;                  /* Crisp white elevated card surface */
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 350 84% 50%;             /* Clinical Crimson / Red */
+    --primary-foreground: 0 0% 100%;    /* Crisp white text on primary */
+    --secondary: 210 40% 96.1%;         /* Slate-100 */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;             /* Slate-100 */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Slate-500 */
+    --accent: 350 100% 97%;             /* Soft rose wash on hover */
+    --accent-foreground: 350 84% 45%;   /* Crimson accent text */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;        /* Slate-200 border */
+    --input: 214.3 31.8% 91.4%;         /* Slate-200 input border */
+    --ring: 350 84% 50%;                /* Clinical crimson focus ring */
+    --radius: 0.5rem;
+
+    /* Analytics Chart Tokens */
+    --chart-1: 350 84% 50%;             /* Primary Clinical Red */
+    --chart-2: 215 25% 27%;             /* Deep Slate */
+    --chart-3: 160 84% 39%;             /* Emerald Green (Approved/Normal) */
+    --chart-4: 38 92% 50%;              /* Amber (Low/Pending) */
+    --chart-5: 217 91% 60%;             /* Medical Blue */
+
+    /* Sidebar Tokens */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 47.4% 11.2%;
+    --sidebar-primary: 350 84% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 350 100% 97%;
+    --sidebar-accent-foreground: 350 84% 45%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 350 84% 50%;
+  }
+
+  .dark {
+    /* Clinical Red & Slate - Dark Mode */
+    --background: 222.2 47.4% 7%;       /* Deep Slate canvas (#090d16) */
+    --foreground: 210 40% 98%;          /* Crisp light slate text (#f8fafc) */
+    --card: 222.2 47.4% 10.5%;          /* Elevated dark slate surface (#0f172a) */
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 11.5%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 350 78% 54%;             /* Luminous clinical crimson */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217.2 32.6% 17.5%;     /* Slate-800 */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;         /* Slate-800 */
+    --muted-foreground: 215 20.2% 65.1%; /* Slate-400 */
+    --accent: 350 50% 16%;              /* Dark crimson glow hover */
+    --accent-foreground: 350 90% 75%;   /* Light crimson accent text */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217.2 32.6% 18%;          /* Slate-800 border */
+    --input: 217.2 32.6% 18%;           /* Slate-800 input border */
+    --ring: 350 78% 54%;                /* Luminous crimson focus ring */
+
+    /* Dark Mode Analytics Chart Tokens */
+    --chart-1: 350 78% 54%;
+    --chart-2: 215 20.2% 65.1%;
+    --chart-3: 160 70% 45%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 217 91% 60%;
+
+    /* Dark Mode Sidebar */
+    --sidebar-background: 222.2 47.4% 9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 350 78% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 350 50% 16%;
+    --sidebar-accent-foreground: 350 90% 75%;
+    --sidebar-border: 217.2 32.6% 18%;
+    --sidebar-ring: 350 78% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
